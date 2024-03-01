@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        body {
+            background-image: url('https://www.ncrts.com/public/images/chat-bot-v2-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #feedback-box {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 15px;
+        }
+
+        #feedback-input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        #submit-feedback {
+            background-color: #4c56af;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+       
+
+    </style>
+    <title>Pulse Buddy</title>
+</head>
+<body>
+    <div id="feedback-box">
+        <h2>Feedback</h2>
+        <input type="text" id="feedback-input" placeholder="Provide your feedback...">
+        <button id="submit-feedback" onclick="submitFeedback()">Submit Feedback</button>
+    </div>
+    <script>
+        function submitFeedback() {
+            var feedbackMessage = document.getElementById("feedback-input").value;
+            alert(Feedback submitted: ${feedbackMessage});
+            document.getElementById("feedback-input").value = ""; // Clear input after submission
+        }
+    </script>
+    </section>
+</body>
+</html>
